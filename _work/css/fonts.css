@@ -1,0 +1,39 @@
+/*
+Open Sans - Bold
+Open Sans - Light
+Open Sans - Semibold Italic
+Merriweather - Light
+Merriweather - Bold
+Merriweather - Light Italic
+Merriweather - UltraBold Italic
+*/
+
+@font-face {
+  font-family: 'Halis-GR-Light';
+  src: url('fonts/halisgr-light.eot'); /* IE9 Compat Modes */
+  src: url('fonts/halisgr-light.eot?#iefix') format('embedded-opentype'), 
+       url('fonts/halisgr-light.woff2') format('woff2'), 
+       url('fonts/halisgr-light.woff') format('woff'), 
+       url('fonts/halisgr-light.ttf')  format('truetype'),
+       url('fonts/halisgr-light.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: 'Halis-GR-Regular';
+  src: url('fonts/halisgr-regular.eot'); /* IE9 Compat Modes */
+  src: url('fonts/halisgr-regular.eot?#iefix') format('embedded-opentype'), 
+       url('fonts/halisgr-regular.woff2') format('woff2'), 
+       url('fonts/halisgr-regular.woff') format('woff'), 
+       url('fonts/halisgr-regular.ttf')  format('truetype'),
+       url('fonts/halisgr-regular.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: 'Halis-GR-Bold';
+  src: url('fonts/halisgr-bold.eot'); /* IE9 Compat Modes */
+  src: url('fonts/halisgr-bold.eot?#iefix') format('embedded-opentype'), 
+       url('fonts/halisgr-bold.woff2') format('woff2'), 
+       url('fonts/halisgr-bold.woff') format('woff'), 
+       url('fonts/halisgr-bold.ttf')  format('truetype'),
+       url('fonts/halisgr-bold.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
