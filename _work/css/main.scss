@@ -227,9 +227,9 @@ h4 {
 
 p {
   font-family: 'Merriweather-Light';
-  font-size:1em;
+  font-size:0.85em;
   color: $var-color-light-grey;
-  line-height:1.5em;
+  line-height:1.75em;
 }
 
 strong {
@@ -403,6 +403,11 @@ footer a {
         &:last-of-type {
           margin:0 0 0 6em;
         }
+  }
+
+  p {
+    font-size:1em;
+    line-height:1.5em;
   }
 
 }
