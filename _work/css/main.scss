@@ -8,13 +8,13 @@
 /* DEFAULT VARIABLES */
 
 /* Colours */
-$var-color-orange:#FF5C2C; 
-$var-color-dark-orange:#992D1F;
-$var-color-brown:#997A58;
-$var-color-dark-grey:#333;
-$var-color-grey:#696A6B;
-$var-color-light-grey:#E7E7E7;
+$var-color-red:#AE5F6B;
+$var-color-blue:#37667B;
+$var-color-dark-grey:#414042;
+$var-color-light-grey:#58595B;
+$var-color-lightest-grey:#A7A9AC;
 $var-color-white:#FFF;
+
 
 
 /* Shortened code for transitions */
@@ -29,12 +29,6 @@ $var-color-white:#FFF;
     transform:         $transform;
 }
 
-/* Shortened code for the dark borders on the bottom of links */
-@mixin link-border-bottom() {
-  color:$var-color-dark-orange;
-  border-bottom:0.15em solid rgba(153, 43, 31, 1);
-}
-
 
 
 
@@ -45,15 +39,14 @@ $var-color-white:#FFF;
 }
 
 body {
-  font-family: 'Source Sans Pro', Arial, sans-serif;
+  font-family: 'Merriweather-Light', Georgia, serif;
   font-size:1.25em;
-  color:$var-color-grey;
-  border-top:0.3em solid $var-color-orange;
+  color:$var-color-light-grey;
   padding-bottom:5em;
 }
 
 .wrapper { /* Wrap this around content if it should max at a certain length and not reach the edges of the window */
-  max-width:60em;
+  max-width:40em;
   margin:0 auto;
   padding:0 2em;
 }
@@ -61,18 +54,19 @@ body {
 img { /* All images should be at max width and shrink down if larger than the screen width */
   max-width:100%;
   height:auto;
+  display:block;
 }
 
 /* Selection - make the highlighted text white and the background orange */
 
 ::-moz-selection { /* Code for Firefox */
     color:white;
-    background:$var-color-orange;
+    background:$var-color-red;
 }
 
 ::selection {
     color:white; 
-    background:$var-color-orange;
+    background:$var-color-red;
 }
 
 
@@ -88,121 +82,11 @@ figure { /* By default, remove margins on figures */
 
 
 
-
-
-/* SECTIONS */
-
-section {
-  width:100%;
-}
-
-.section-style-guide section, .section-project-details:not(:last-of-type) { /* Applies bottom borders to certain sections - those that comprise top headings, and those that comprise style guide and project detail sections (but not the last of those sections) */
-  margin-bottom:0.5em;
-  padding-bottom:2em;
-  border-bottom:0.1em solid $var-color-light-grey;
-}
-
-section.section-contact, footer { /* In some instances, the border should be applied to the top instead */
-  padding-top:0.5em;
-  margin-top:2em;
-  border-top:0.2em solid $var-color-light-grey;
-}
-
-section.section-style-guide {
-  margin:0;
-  padding:0;
-  border:0;
-}
-
-header {
-  margin-bottom:4em;
-  padding:0 2em 5em 2em;
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
-}
-
-/* SECTIONS */
-
-
-
-
-
-
-/* HEADERS */
-
-header[class] {
-  background-attachment: fixed;
-  background-position: top center;
-}
-
-.header-index {
-  background: 
-    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), /* top, transparent black, faked with gradient */ 
-    url('../img/index-banner.png');            /* bottom, image */
-}
-
-.header-carnarvon-cougars {
-  background: 
-    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),         /* top, transparent black, faked with gradient */ 
-    url('../img/carnarvon-cougars/carnarvon-cougars-banner.png');    /* bottom, image */
-}
-
-.header-vanvero {
-  background: 
-    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),   /* top, transparent black, faked with gradient */ 
-    url('../img/vanvero/vanvero-banner.png');                  /* bottom, image */
-}
-
-.header-wallpaper-mario {
-  background: 
-    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),   /* top, transparent black, faked with gradient */ 
-    url('../img/wallpaper-mario/wallpaper-mario-banner.png');  /* bottom, image */
-}
-
-.header-learn-lead-liftup {
-  background: 
-    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),   /* top, transparent black, faked with gradient */ 
-    url('../img/learn-lead-liftup/learn-lead-liftup-banner.png');  /* bottom, image */
-}
-
-.header-axe-sings {
-  background: 
-    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),   /* top, transparent black, faked with gradient */ 
-    url('../img/axe-sings/axe-sings-banner.png');  /* bottom, image */
-}
-
-.header-nwhacks {
-  background: 
-    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),   /* top, transparent black, faked with gradient */ 
-    url('../img/nwhacks/nwhacks-banner.png');  /* bottom, image */
-}
-
-.header-optimail {
-  background: 
-    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),   /* top, transparent black, faked with gradient */ 
-    url('../img/optimail/optimail-banner.png');  /* bottom, image */
-}
-
-.header-other-works {
-  background: 
-    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),   /* top, transparent black, faked with gradient */ 
-    url('../img/other-works/other-works-banner.png');  /* bottom, image */
-}
-
-/* HEADERS */
-
-
-
-
-
-
-
-
-
-
 /* MAIN NAVIGATION */
 
 nav {
   padding:1em 0;
+  background-color: $var-color-white;
 
     &:after { /* Clear the floats underneath the navigation bar */
       content: "";
@@ -210,40 +94,48 @@ nav {
       clear: both;
     }
 
-    ul { /* The ul houses the Work, About, and Contact links */
+    ul { /* The ul houses the Work, About, and logo */
       margin:0;
-      text-align:right;
+      text-align:center;
       padding: 0;
     }
 
     li {
       list-style-type:none;
-      display:block;
+      display:inline-block;
       text-transform:uppercase;
       font-size:0.85em;
-      margin:0 0 0.5em 0;
-      font-family:'Source Sans Pro-600', Arial, sans-serif;
+      font-family:'HalisGR-Regular', Arial, sans-serif;
+      vertical-align:middle;
+
+        &:first-of-type {
+          margin:0 4em 0 0;
+        }
+
+        &:last-of-type {
+          margin:0 0 0 4em;
+        }
     }
 
     img { /* The logo image in the nav bar */
-      float:left;
       margin:0;
       opacity:1;
       @include transition(opacity 0.3s ease-out);
+
+        &:hover, &:focus { /* Have the logo image become translucent on hover*/
+          opacity:0.5;
+          @include transition(opacity 0.3s ease-out);
+        }
     }
 
-    img:hover, img:focus { /* Have the logo image become translucent on hover*/
-      opacity:0.5;
-      @include transition(opacity 0.3s ease-out);
-    }
+    .nav-text {
+      color: $var-color-dark-grey;
+      padding:0 0.25em;
+      border-bottom:0.15em solid $var-color-dark-grey;
 
-    a {
-      color: $var-color-white;
-    }
-
-    a.nav-link-current, a:focus, a:hover { /* The .nav-link-current class identifies the active page, so that viewers can see which page they're on by looking at the navigation bar */
-      color: $var-color-white;
-      border-bottom:0.15em solid $var-color-white;
+        &:hover, &:focus {
+          background-color:$var-color-dark-grey;
+        }
     }
 
 }
@@ -253,6 +145,38 @@ nav {
 
 
 
+
+
+/* HEADER ELEMENTS */
+
+header {
+  margin-bottom:5em;
+}
+
+#h1-title {
+  text-transform:uppercase;
+}
+
+#img-title {
+  margin:2em auto 0 auto;
+  padding:0 2em;
+}
+
+/* HEADER ELEMENTS */
+
+
+
+
+
+
+/* FOOTER ELEMENTS */
+
+footer {
+  border-top:0.1em solid $var-color-lightest-grey;
+  margin-top:5em;
+}
+
+/* FOOTER ELEMENTS */
 
 
 
@@ -265,89 +189,68 @@ nav {
 
 /* Headings */
 
-h1 {
-  font-size:1.75em;
-  margin-top:1.5em;
-  margin-bottom:0;
-  font-family: 'Ubuntu-700', Arial, sans-serif;
-  color:$var-color-white;
+h1, h2 {
+  color:$var-color-dark-grey;
+  text-align:center;
 }
 
-h2, h3 {
-  text-transform:uppercase;
-  font-family: 'Ubuntu-700', Arial, sans-serif;
+h1 {
+  font-size:2.25em;
+  margin-top:1.25em;
+  margin-bottom:0;
+  line-height:0.65em;
+  font-family: 'HalisGR-Bold', Arial, sans-serif;
 }
 
 h2 {
-  font-size:0.9em;
+  font-size:1.25em;
   margin-top: 0;
   margin-bottom: 0.5em;
-  color:$var-color-white;
+  font-family: 'OpenSans-Light', Arial, sans-serif;
 }
 
 h3 {
-  font-size:0.9em;
-  margin-bottom: 0;
-  color:$var-color-dark-grey;
-}
-
-.col-1of4 h3:after { /* H3 titles on the works pages only */
-  color:$var-color-dark-orange;
-  content:"\A \2014";
-  white-space:pre;
-}
-
-header h2 { /* H2 headers should convert to uppercase, unless it's the h2 header that appears in the header- that needs to have normal capitalization */
-  text-transform:none;
+  font-size:1.5em;
+  margin-top: 0;
+  margin-bottom: 0.5em;
+  font-family: 'OpenSans-Semibold-Italic', Arial, sans-serif;
 }
 
 h4 {
-  text-transform:uppercase;
-  font-size:0.8em;
-  font-family: 'Ubuntu-700-italic', Arial, sans-serif;
-  margin-bottom: 0;
-  color:$var-color-dark-orange;
+  font-size:1.125em;
+  margin-top: 0;
+  margin-bottom: 0.5em;
+  font-family: 'OpenSans-Bold', Arial, sans-serif;
 }
 
-/* Paragraphs */
-p, ul, ol {
-  margin:0 0 1em 0;
-  font-size:0.8em;
+/* Text */
+
+p {
+  font-family: 'Merriweather-Light';
+  font-size:1em;
+  color: $var-color-light-grey;
   line-height:1.5em;
 }
 
-p.strong {
-  font-family:'Source Sans Pro-600', Arial, sans-serif;
+strong {
+  font-family: 'Merriweather-Bold';
+}
+  
+strong em, em strong {
+  font-family: 'Merriweather-Bold-Italic';
 }
 
-/* Blockquotes */
-blockquote {
-  font-size: 1.1em;
-  margin: 3em 0;
-  padding: 0.25em 1.5em;
-  line-height: 1.45;
-  position: relative;
-  color: $var-color-brown;
+em {
+  font-family: 'Merriweather-Light-Italic';
+}
 
-    &:before { /* Include a large quotation mark before blockquotes */
-      display: block;
-      content: "\201C";
-      font-size: 2em;
-      position: absolute;
-      left: 0.3em;
-      top: -0.35em;
-      color: $var-color-brown;
-    }
 
-    cite {
-      font-size:0.8em;
-      color:$var-color-grey;
-    }
 
-    cite:before { /* Include a dash before citations */
-      content: "\2014 \2009";
-    }
-
+footer p {
+  font-size:0.75em;
+  font-family:'HalisGR-Regular';
+  text-align:center;
+  line-height:1em;
 }
 
 /* TEXT ELEMENTS */
@@ -357,59 +260,38 @@ blockquote {
 
 
 
-
-
-
-
-
-
-
-
 /* INTERACTIVE ELEMENTS */
 
-/* Styling for the buttons */
-.button {
-  display: block;
-  margin:0 auto;
-  width:15em;
-  text-align:center;
-  padding: 0.5em 0.75em;
-  color: $var-color-white;
-  background-color: $var-color-orange;
-  text-decoration: none;
-  text-transform:uppercase;
-  font-family:'Ubuntu-700', Arial, sans-serif;
-  @include transition(background-color 0.1s ease-out);
-
-    &:hover, &:focus {
-      background-color: $var-color-dark-orange;
-      color:$var-color-white;
-    }
-
-}
-
-/* Styling for the link */
 a {
-  color:$var-color-orange;
-  border-bottom:0.15em solid rgba(153, 43, 31, 0);
   text-decoration:none;
   @include transition(all 0.3s ease-out);
 
     &:hover, &:focus {
-      @include link-border-bottom();
+      color: $var-color-white;
       @include transition(all 0.3s ease-out);
     }
+}
 
+.main p a {
+  color: $var-color-red;
+  padding:0 0.25em;
+  border-bottom:0.1em solid $var-color-red;
+  
+    &:hover, &:focus {
+      color: $var-color-white;
+      background-color:$var-color-red;
+    }
+}
+
+footer a {
+  color: $var-color-blue;
+
+    &:hover, &:focus {
+      background-color: $var-color-blue;
+    }
 }
 
 /* INTERACTIVE ELEMENTS */
-
-
-
-
-
-
-
 
 
 
@@ -423,7 +305,7 @@ a {
 }
 
 [class*='col-'] { /* By default (mobile-first) columns are stacked */
-  margin:0.5em 0;
+  margin:0;
   width:100%;
 }
 
@@ -433,284 +315,59 @@ a {
 
 
 
+/* PROJECT PREVIEWS */
 
 /* PROJECTS */
 
 .project-preview { /* The boxes on the homepage that link to the projects */
-  padding:0.3em 0;
   text-align:center;
   opacity:1;
   position:relative;
 
-    img {
-      display:block;
-    }
-
     .project-info { /* The textbox inside the project-preview box that contains the project's information */
       position:absolute;
-      background-color: rgba(51, 51, 51, 1);
-      height:3em;
+      background-color: rgba(51, 51, 51, 0);
+      top:0;
       left:0;
       right:0;
       bottom:0;
       @include transition(all 0.3s ease-out);
     }
 
-    &:hover .project-info, &:focus .project-info { /* Cause the project-info box to expand when the project-preview box is hovered over */
-      background-color: rgba(51, 51, 51, 0.9);
-      height:100%;
+    &:hover .project-info, &:focus .project-info { /* Cause the project-info box to become opaque when the preview box is hovered over */
+      background-color: rgba(51, 51, 51, 0.8);
       @include transition(all 0.3s ease-out);
     }
 
     .project-name { /* The name of the project */
-      font-family:'Ubuntu-700', Arial, sans-serif;
-      font-size:1em;
-      margin:0.5em 0 0 0;
-      line-height:1;
-      color:$var-color-white;
+      text-transform:uppercase;
+      font-family:'HalisGR-Regular', Arial, sans-serif;
+      font-size:1.25em;
+      margin-top:35%;
+      color: rgba(255, 255, 255, 0);
       @include transition(all 0.3s ease-out);
-    }
-
-    .project-type { /* The domain of the project (e.g. graphic design, UX design, etc.) */
-      font-family:'Ubuntu-italic', Arial, sans-serif;
-      font-size:0.8em;
-      margin:0;
-      padding-bottom:2em;
-      line-height:1;
-      color:$var-color-white;
     }
 
     &:hover .project-name, &:focus .project-name { /* Text needs to also move when the box expands */
-      margin-top:50%;
+      color: rgba(255, 255, 255, 1);
       @include transition(all 0.3s ease-out);
     }
 
 }
 
-/* Project Image */
+/* PROJECT PREVIEWS */
+
+
+
+
+
+/* WITHIN THE PROECT */
 
 .project-image {
-  color:$var-color-dark-grey;
-  font-family:'Ubuntu-italic', Arial, sans-serif;
-  margin:3em 0;
-
-/*
-    h4 {
-      margin:0;
-    }
-
-    h4:before {
-      color:$var-color-dark-orange;
-      content:"\2014 \A";
-      white-space:pre;
-    }
-*/
-    p:after {
-      color:$var-color-dark-orange;
-      content:"\A \2014";
-      white-space:pre;
-    }
-
-    img {
-      position:relative;
-      -webkit-transition: -webkit-transform 0.3s;
-      transition: -webkit-transform 0.3s;
-    }
-
-    img:hover {
-      @extend img;
-      @include transform(scale(1.03));
-    }
-
+  margin:2em 0;
 }
 
-/* Images that can be clicked on to open the full, high-res version */
-
-a.img-view-more, a.img-view-more:hover, a.img-view-more:focus, .project-image a, .project-image:hover a, .project-image:focus a { /* For every image that can be clicked on to view more, remove the underline */
-  border-bottom:none;
-}
-
-.img-view-more img {
-  opacity:1;
-  @include transition(all 0.3s ease-out);
-  margin:1em 0;
-}
-
-.img-view-more img:hover, .img-view-more img:focus {
-  opacity:0.75;
-  @include transition(all 0.3s ease-out);
-  box-shadow: 0 0.3em 0.3em 0 rgba(0,0,0,.3)
-}
-
-/* PROJECTS */
-
-
-
-
-
-
-
-/* ABOUT PAGE */
-
-.img-profile {
-  padding:0;
-
-    &:hover, &:focus {
-      content: url('../img/profile-picture-sunglasses.jpg'); /* Give me wicked sunglasses on hover */
-    }
-
-}
-
-/* ABOUT PAGE */
-
-
-
-
-
-
-/* CONTACT PAGE */
-
-ul.contact-list {
-  padding:0 1em;
-
-    li { 
-      list-style-type: none;
-      margin:0;
-      padding:0 0 1em 2em;
-      vertical-align: middle;
-    }
-
-    /* Each list item gets its own icon */
-
-
-    li#contact-email {
-      background:url(../img/icon-email.png) no-repeat 0 0.2em transparent;
-    }
-
-    li#contact-phone {
-      background:url(../img/icon-phone.png) no-repeat 0 0.1em transparent;
-    }
-
-    li#contact-linkedin {
-      background:url(../img/icon-linkedin.png) no-repeat 0 0 transparent;
-    }
-
-    li#contact-behance {
-      background:url(../img/icon-behance.png) no-repeat 0 0.2em transparent;
-    }
-
-    li#contact-resume {
-      background:url(../img/icon-resume.png) no-repeat 0 0.2em transparent;
-    }
-
-}
-
-/* CONTACT PAGE */
-
-
-
-
-
-
-/* VIDEO EMBEDS */
-
-.videoWrapper {
-  position: relative;
-  padding-bottom: 56.25%; /* 16:9 */
-  padding-top: 25px;
-  height: 0;
-  margin:1em 0;
-}
-.videoWrapper iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-/* VIDEO EMBEDS */
-
-
-
-
-
-
-
-
-/* STYLE GUIDE SPECIFICS */
-
-/* Code snippets */
-code {
-  margin-top:0.75em;
-  background-color: #EEE;
-  padding: 0.5em 0.75em;
-  display: block;
-  font-size:0.75em;
-}
-
-/* Display headings in the style guide */
-#text_elements h1 {
-  margin:0 0 0.25em 0;
-}
-
-/* Colour Palette */
-
-.colour-palette {
-  overflow: auto;
-  width: 100%
-}
-
-.colour-block {
-  width:100%;
-  height:10em;
-  display:inline-block;
-}
-
-#colour-block-orange {
-  background-color:$var-color-orange;
-}
-
-#colour-block-dark-orange {
-  background-color:$var-color-dark-orange;
-}
-
-#colour-block-brown {
-  background-color:$var-color-brown;
-}
-
-#colour-block-dark-grey {
-  background-color:$var-color-dark-grey;
-}
-
-#colour-block-grey {
-  background-color:$var-color-grey;
-}
-
-.colour-block p {
-  text-align:center;
-  line-height:8em;
-  color:$var-color-white;
-}
-
-section.section-style-guide:last-of-type section:last-of-type { /* Remove border from very bottom of page */
-  border-bottom:none;
-}
-
-section[id] > h1 { /* Give a border to the sections with a header in them - on the style guide page only */
-  font-size:2em;
-  margin-bottom:0.5em;
-  padding-bottom:2em;
-  border-bottom:0.1em solid $var-color-light-grey;
-}
-
-/* STYLE GUIDE SPECIFICS */
-
-
-
-
-
-
+/* WITHIN THE PROECT */
 
 
 
@@ -718,88 +375,42 @@ section[id] > h1 { /* Give a border to the sections with a header in them - on t
 
 /* MEDIA QUERIES */
 
-@media (min-width:35em) { /* Media queries which take place once the screen is 35em or larger */
+@media (min-width:36.25em) { /* Media queries which take place once the screen is 36.25 em or larger */
 
   h1 {
-    font-size:2.5em;
-    margin-top:1.5em;
+    font-size:3.5em;
+    margin-top:1em;
+    line-height:0.85em;
   }
 
   h2 {
-    font-size:1.1em;
+    font-size:1.5em;
   }
 
   h3 {
-    font-size:1.1em;
-    margin-bottom:0.3em;
+    font-size:2em;
   }
 
   h4 {
-    font-size:0.9em;
+    font-size:1.25em;
   }
 
-  p, ul, ol {
-    font-size:1em;
-  }
+  nav li {
+    &:first-of-type {
+          margin:0 6em 0 0;
+        }
 
-  .project-image p {
-    font-size:0.8em;
-  }
-
-  nav ul li {
-    display:inline-block;
-    margin-left:3em;
-  }
-
-  .section-style-guide section, .section-project-details section:not(:last-of-type) {
-    padding-bottom:3.5em;
-  }
-
-  header {
-    padding-bottom:7em;
-  }
-
-  section.section-contact, footer {
-    margin-top:3.5em;
-  }
-
-  .img-profile {
-    padding:0 4.5em;
-  }
-
-  footer p {
-    font-size:0.8em;
+        &:last-of-type {
+          margin:0 0 0 6em;
+        }
   }
 
 }
 
 
-
-
-
-
 @media (min-width:40em) { /* Media queries which take place once the screen is 40em or larger */
 
-  blockquote {
-    font-size: 1.5em;
-    padding: 0.25em 3em;
-  }
-
-  blockquote:before {
-    font-size: 4em;
-  }
-
-  cite {
-    font-size:0.65em;
-  }
-
-  .container { /* Regular grids used for layout */
-    margin-left:-0.5em;
-    margin-right:-0.5em;
-  }
-
   [class*='col-'] { /* Remove outside margins */
-    padding:0 0.5em;
     float:left;
   }
 
@@ -807,78 +418,14 @@ section[id] > h1 { /* Give a border to the sections with a header in them - on t
     width:50%;
   }
 
-  .project-preview .project-info {
-    left:0.5em;
-    right:0.5em;
-  }
-
 }
 
-
-
-
-
-
-@media (min-width:56.25em) { /* Media queries which take place once the screen is 56.25em or larger */
-
-  h1 {
-    font-size:3.5em;
-    margin-top:1.5em;
-    text-align:center;
-  }
-
-  header h2 {
-    text-align:center;
-  }
+@media (min-width:55em) { /* Media queries which take place once the screen is 55em or larger */
 
   .col-1of3 {
-    width:33.33%; /* At a certain screen size, make the columns 33% and 66% */
+    width:33.33%; /* At a certain screen size, make the columns 33% */
   }
 
-  .col-2of3 {
-    width:66.66%;
-  }
-
-  .col-1of4 {
-    width:25%;
-  }
-
-  .col-3of4 {
-    width:75%;
-  }
-
-  .col-1of2 {
-    width:50%;
-  }
-
-  .section-style-guide section, .section-project-details section:not(:last-of-type) {
-    padding-bottom:5em;
-  }
-
-  section.section-contact, footer {
-    margin-top:5em;
-  }
-
-  .img-profile {
-    padding:0;
-  }
-
-  h3 {
-    margin-top:0;
-  }
-
-}
-
-
-
-
-
-
-@media (min-width:60em) { /* Media queries which take place once the screen is 60em or larger */
-  .colour-block {
-    width:20%;
-    float:left;
-  }
 }
 
 /* MEDIA QUERIES */
