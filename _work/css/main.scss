@@ -410,11 +410,6 @@ footer a {
     line-height:1.5em;
   }
 
-}
-
-
-@media (min-width:40em) { /* Media queries which take place once the screen is 40em or larger */
-
   [class*='col-'] { /* Remove outside margins */
     float:left;
   }
@@ -425,7 +420,7 @@ footer a {
 
 }
 
-@media (min-width:55em) { /* Media queries which take place once the screen is 55em or larger */
+@media (min-width:70em) { /* Media queries which take place once the screen is 60em or larger */
 
   .col-1of3 {
     width:33.33%; /* At a certain screen size, make the columns 33% */
