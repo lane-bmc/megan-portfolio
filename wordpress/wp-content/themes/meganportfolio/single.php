@@ -10,6 +10,8 @@
           get_template_part( 'content-single', get_post_format() );
         endwhile; endif; 
       ?>
+
+      <a class="button" href="/index.php/">More Projects</a>
         
     </div>
   </section>

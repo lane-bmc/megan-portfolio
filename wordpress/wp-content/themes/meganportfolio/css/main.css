@@ -488,9 +488,9 @@ nav {
     font-family: 'HalisGR-Regular', Arial, sans-serif;
     vertical-align: middle; }
     nav li:first-of-type {
-      margin: 0 4em 0 0; }
+      margin: 0 3em 0 0; }
     nav li:last-of-type {
-      margin: 0 0 0 4em; }
+      margin: 0 0 0 3em; }
   nav img {
     /* The logo image in the nav bar */
     margin: 0;
@@ -602,6 +602,25 @@ footer a {
   color: #37667B; }
   footer a:hover, footer a:focus {
     background-color: #37667B; }
+
+/* Styling for the buttons */
+.button {
+  display: block;
+  margin:2em auto 0;
+  width:14em;
+  text-align:center;
+  padding: 0.5em 0.75em;
+  color: #AE5F6B;
+  background-color: #FFF;
+  border: 0.1em solid #AE5F6B;
+  text-transform:uppercase;
+  font-family:'HalisGR-Regular', Arial, sans-serif;
+}
+
+.button:hover, .button:focus {
+  background-color: #AE5F6B;
+  color:#FFF;
+}
 
 /* INTERACTIVE ELEMENTS */
 /* GRID SYSTEM */
